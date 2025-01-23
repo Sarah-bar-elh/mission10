@@ -1,0 +1,79 @@
+<!-- Module de Facturation -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module de Facturation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="facture-container">
+        <header>
+            <h1>FACTURE</h1>
+            <p>Date : <span id="date">23/01/2025</span></p>
+            <div class="company-info">
+                <h3>Nom de la compagnie : Laboratoire Innothera</h3>
+                <p>Adresse postale : Chouzy - sur - Cisse 41150</p>
+                <p>Détails de contact : 02 54 51 22 00</p>
+            </div>
+        </header>
+        <section class="destinataire">
+            <div>
+                <h3>Destinataire : ...........</h3>
+                <p>Nom: ...............</p>
+                <p>Adresse postale:....................</p>
+                <p>Email: ...................</p>
+            </div>
+            <div>
+                <h3>Envoyée à: ......................</h3>
+                <p>Nom : ........................</p>
+                <p>Adresse postale: .........................</p>
+                <p>Téléphone:.......................................</p>
+            </div>
+        </section>
+        <table id="table_inv">
+            <thead>
+                <tr>
+                    <th>DESCRIPTION</th>
+                    <th>QUANTITÉ</th>
+                    <th>PRIX UNITAIRE</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row" id="modeleLigne">
+                    <td><input type="text" class="desc" value=""></td>
+                    <td><input type="number" class="qte" value="0"></td>
+                    <td><input type="number" class="prix" value="0"></td>
+                    <td><input type="number" class="total" readonly value="0"></td>
+                </tr>
+                <tr class="row lastrow" id="lastLine">
+                    <td><input type="text" class="desc" value=""></td>
+                    <td><input type="number" class="qte" value="0"></td>
+                    <td><input type="number" class="prix" value="0"></td>
+                    <td><input type="number" class="total" readonly value="0"></td>
+                </tr>
+            </tbody>
+        </table>
+        <footer>
+            <div class="calculations">
+                <p>Sous-total : <span id="sousTotal">0.00</span> €</p>
+                <p>Remise : <input type="number" id="remise" value="10"> %</p>
+                <p>Sous-total après remise : <span id="sousTotalApresRemise">0.00</span> €</p>
+                <p>Taxe totale (10%) : <span id="taxeTotale">0.00</span> €</p>
+                <p>Frais d'expédition : <input type="number" id="expedition" value="12"> €</p>
+                <p><strong>SOLDE DU :</strong> <span id="solde">0.00</span> €</p>
+            </div>
+            <div class="actions">
+                <button id="calculer">Calculer</button>
+                <button id="ajouterLigne">Ajouter une ligne</button>
+                <button id="remplirAuto">Remplir automatiquement</button>
+                <button id="annuler">Annuler</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
