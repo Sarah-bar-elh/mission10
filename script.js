@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     // pour le bouton
-    document.getElementById("btn-retour").addEventListener("click", function() {
+    document.getElementById("retour").addEventListener("click", function() {
         window.location.href = "https://sarah-bar-elh.github.io/newbst_sio/mission.html";
     });
 });
